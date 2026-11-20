@@ -1,0 +1,8 @@
+chromadb>=1.0,<2
+langchain-core>=1.7,<2
+langchain-openai>=1.7,<2
+langchain-anthropic>=1.7,<2
+langchain-text-splitters>=1.0,<2
+pydantic>=2.14,<3
+python-dotenv>=1.2,<2
+tiktoken>=0.14,<1
