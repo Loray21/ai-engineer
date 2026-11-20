@@ -1,6 +1,4 @@
-import asyncio
 import os
-import sys
 from functools import cache
 
 from chromadb.api.models.Collection import Collection
@@ -184,9 +182,4 @@ async def get_rag_response(query: str) -> RespuestaRAG:
     return await get_chain().ainvoke(query)
 
 
-if __name__ == "__main__":
-    sys.stdout.reconfigure(encoding="utf-8")   # acentos en la consola de Windows
-    query = " ".join(sys.argv[1:]) or "¿Cuánto se tarda en llegar al refugio?"
-    print(f"\nPregunta: {query}\n")
-    resultado = asyncio.run(get_rag_response(query))
-    print(resultado.model_dump_json(indent=2))
+

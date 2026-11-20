@@ -45,7 +45,7 @@ python ingest.py --reset   # borra la colección y vuelve a indexar (por ejemplo
 
 Si la colección ya tiene datos, `ingest.py` no reindexa: muestra cuántos fragmentos hay y termina. La primera ejecución descarga el modelo de embeddings (unos 80 MB).
 
-Este paso es opcional: si la base no existe, `rag.py` y `main.py` la crean solos.
+Este paso es opcional: si la base no existe, `main.py` la crea solo.
 
 ### 2. Correr las dos pruebas
 
@@ -60,11 +60,7 @@ python main.py
 
 Las dos preguntas se procesan en paralelo con `asyncio.gather`. El script termina con código 0 si las dos se comportaron como se esperaba y con 1 si alguna no.
 
-### 3. Hacer otras preguntas
-
-```bash
-python rag.py "¿Se puede hacer fuego en el refugio?"
-```
+Para probar otras preguntas, agregalas a la lista `CASOS` de `main.py` o usá `get_rag_response()` desde código (ver abajo).
 
 ## Uso desde código
 
